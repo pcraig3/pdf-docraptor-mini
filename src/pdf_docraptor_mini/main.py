@@ -21,7 +21,7 @@ def main() -> None:
     DOCRAPTOR_API_KEY = os.getenv("DOCRAPTOR_API_KEY")
     if not DOCRAPTOR_API_KEY:
         raise RuntimeError(
-            "Missing DOCRAPTOR_API_KEY. Copy .env.example to .env and fill in your DocRaptor API key."
+            "Missing DOCRAPTOR_API_KEY. Make sure DOCRAPTOR_API_KEY exists in your .env file."
         )
 
     html = TEMPLATE_PATH.read_text(encoding="utf-8")
