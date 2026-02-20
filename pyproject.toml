@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pdf-docraptor-mini"
+version = "0.1.0"
+description = "Minimal DocRaptor PDF generator using Poetry"
+authors = ["Paul Craig <paul@pcraig3.ca>"]
+readme = "README.md"
+packages = [{ include = "pdf_docraptor_mini", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.14"
+docraptor = "^3.1.0"
+python-dotenv = "^1.2.1"
+
+[tool.poetry.scripts]
+dr = "pdf_docraptor_mini.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
